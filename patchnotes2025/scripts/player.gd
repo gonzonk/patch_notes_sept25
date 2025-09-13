@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const speed = 16
+const speed = 70
 @onready var player: CharacterBody2D = $"."
 
 

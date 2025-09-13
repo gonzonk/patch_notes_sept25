@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://boxlhph3qha32"]
+[gd_scene load_steps=4 format=4 uid="uid://boxlhph3qha32"]
 
 [ext_resource type="PackedScene" uid="uid://wgj0wu3mkvo0" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="TileSet" uid="uid://merw8l6rdapc" path="res://assets/tilesets/ts1.tres" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://ppycrxmxrwwf" path="res://scenes/enemy.tscn" id="3_lnu2h"]
 
 [node name="Game" type="Node2D"]
 
@@ -9,7 +10,7 @@
 position = Vector2(53, 31)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(4, 4)
+zoom = Vector2(5, 5)
 position_smoothing_enabled = true
 
 [node name="backgroundLayer" type="TileMapLayer" parent="."]
@@ -21,3 +22,17 @@ tile_set = ExtResource("2_yqjtg")
 position = Vector2(53, 31)
 tile_map_data = PackedByteArray("AAABAP//AAADAAAAAAABAAAAAAADAAAAAAABAAEAAAADAAAAAAAEAP//AAADAAAAAAAEAAAAAAADAAAAAAAEAAEAAAADAAAAAAADAAEAAAADAAAAAAACAAEAAAADAAAAAAD//wAAAAADAAIAAAD//wEAAAADAAIAAAD//wIAAAADAAIAAAAAAAMAAAADAAIAAAABAAMAAAADAAIAAAACAAMAAAADAAIAAAADAAMAAAADAAIAAAAEAAMAAAADAAIAAAA=")
 tile_set = ExtResource("2_yqjtg")
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("3_lnu2h")]
+position = Vector2(167, 73)
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource("3_lnu2h")]
+position = Vector2(141, 73)
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource("3_lnu2h")]
+position = Vector2(95, 40)
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource("3_lnu2h")]
+position = Vector2(146, 23)

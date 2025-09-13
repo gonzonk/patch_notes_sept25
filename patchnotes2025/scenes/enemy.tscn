@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://ppycrxmxrwwf"]
+
+[ext_resource type="Script" uid="uid://bq2thxfelyxy0" path="res://scripts/enemy.gd" id="1_rkbax"]
+[ext_resource type="Texture2D" uid="uid://dmmehp02atuf8" path="res://assets/sprites/blueguy.png" id="2_rkbax"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1dw6"]
+atlas = ExtResource("2_rkbax")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yw30f"]
+atlas = ExtResource("2_rkbax")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkbax"]
+atlas = ExtResource("2_rkbax")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjkh3"]
+atlas = ExtResource("2_rkbax")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qjkh3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1dw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yw30f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkbax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjkh3")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
+size = Vector2(24, 27)
+
+[node name="Enemy" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_rkbax")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_qjkh3")
+animation = &"walk"
+autoplay = "walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_rkbax")
