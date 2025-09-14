@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fqsyh5llkexk"
+path="res://.godot/imported/135 glitch.mp3-dc533e223ed6987aa0de2c50628ea3d5.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/135 glitch.mp3"
+dest_files=["res://.godot/imported/135 glitch.mp3-dc533e223ed6987aa0de2c50628ea3d5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

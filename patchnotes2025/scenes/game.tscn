@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://boxlhph3qha32"]
+[gd_scene load_steps=5 format=4 uid="uid://boxlhph3qha32"]
 
 [ext_resource type="PackedScene" uid="uid://wgj0wu3mkvo0" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="AudioStream" uid="uid://fqsyh5llkexk" path="res://assets/sfx/135 glitch.mp3" id="2_lbhrr"]
 [ext_resource type="TileSet" uid="uid://merw8l6rdapc" path="res://assets/tilesets/ts1.tres" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://ppycrxmxrwwf" path="res://scenes/enemy.tscn" id="3_lnu2h"]
 
@@ -36,3 +37,8 @@ position = Vector2(95, 40)
 
 [node name="Enemy4" parent="Enemies" instance=ExtResource("3_lnu2h")]
 position = Vector2(146, 23)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_lbhrr")
+autoplay = true
+parameters/looping = true
